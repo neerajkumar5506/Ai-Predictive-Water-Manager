@@ -1,0 +1,168 @@
+/* Background Image yahan lagega */
+.dash-page{
+  background: #eef2f7;
+   background-image: url('/public/image.jpg'); 
+  background-size: cover; 
+  background-attachment: fixed; 
+  min-height: 100vh;
+  padding: 100px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* Har section alag */
+}
+
+/* ---- ALAG-ALAG CARD FIX ---- */
+.card{
+  background: #9a9898;
+  border-radius: 16px;
+  padding: 50px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+  border: 1px solid #e9edf2;
+  
+}
+.box{
+  background: #aeb59c;
+  border-radius: 16px;
+  padding: 10px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.06);
+  border: 1px solid #e9edf2; 
+}
+
+/* Grid gaps */
+.top-row-3{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+}
+.middle-row{
+  display: grid;
+  grid-template-columns: 320px 1fr;
+  gap: 20px;
+}
+.left-col{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Design */
+.card{ display: flex; align-items: center; gap: 40px;}
+.c-icon{ width: 60px; height: 60px; background: #f1f5f9; display: flex; align-items: center; justify-content: center; border-radius: 10px; font-size: 40px; }
+.c-title{ font-size: 25px; color: #3c3b3b; font-weight: 700; text-transform: uppercase;gap: 10px !important; }
+.c-val{ font-size: 35px; font-weight: 800; margin-top: 10px; }
+.c-small{ font-size: 12px; color: #6b7280; margin-top: 2px; }
+.box-head{ font-size: 35px; font-weight: 700; color: #010000; margin-bottom: 15px; }
+.pump-center{ text-align: center; margin: 100px 0; }
+.pump-icon{ width: 50px; height: 50px; background: #e3f2fd; margin: 0 auto 6px; display: flex; align-items: center; justify-content: center; border-radius: 12px; font-size: 22px; }
+.pump-icon.active{ background: #dcfce7;}
+.pump-text{ font-size: 25px; color: #2c2929; margin: 50px ;}
+
+.btn-water,.btn-blue{ width: 100%; padding: 11px; border: none; border-radius: 8px; font-weight: 700; cursor: pointer; margin-top: 20px; color: white; }
+.btn-water.green{ background: #22c55e;font-size: 25px; }
+.btn-water.red{ background: #ef4444; }
+.btn-blue{ background: #0ea5e9;font-size: 25px; }
+
+.chart-wrap{ height: 600px; width: 100%;}
+
+
+.history-table{ width: 100%; border-collapse: collapse; margin-top: 10px; }
+.history-table th{ background: #3dcd72; color: rgb(167, 157, 157);background-color: #c5aa22; padding: 12px; text-align: left; font-size: 30px; }
+.history-table td{ padding: 30px; text-align: center; font-size: 25px; border-bottom: 1px solid #eef2f6;background-color: rgb(221, 208, 192); }
+
+@media(max-width: 900px){
+ .top-row-3,.middle-row{ grid-template-columns: 1fr; }
+}
+/* Right side normal size */
+.middle-row{
+  
+  display: grid;
+  grid-template-columns: 1fr 1908px; /* 300px is normal */
+  gap: 16px;
+  align-items: stretch;
+}
+.chart-box,.pump-box{
+height: 100%;
+margin: 0!important;
+min-height: 400px!important;
+}
+  
+
+
+.right-col{
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  
+}
+
+.weather-card{
+  padding: 50px!important;
+  min-height: auto!important;
+}
+
+.weather-card .c-val{
+  font-size: 35px!important;
+}
+
+.pump-box{
+  padding: 100px!important;
+  min-height: auto!important; /* Bada height hata diya */
+ 
+  
+ 
+}
+
+.pump-icon{
+  width: 100px!important;
+  height: 100px!important;
+  font-size: 50px!important;
+}
+
+.chart-wrap{
+  height: 900px!important;
+}
+.pump-center{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+
+}
+.box-head{
+  padding-bottom: 25px;
+}
+
+
+.dash-page.dashboard-scroll{
+  height: calc(100vh - 70px) !important;
+  overflow-y: auto !important;
+  overflow-x: hidden !important;
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 20px !important;
+  padding-bottom: 100px !important;
+}
+/* Toggle Button CSS */
+
+@keyframes pumpBeat {
+  0% { transform: scale(1.2); }
+  100% { transform: scale(1.4); }
+}
+.toggle-switch { position: relative; width: 70px; height: 30px; display: inline-block; }
+.toggle-switch input { opacity: 0; width: 0; height: 0; }
+.slider { position: absolute; inset: 0; background: white; border-radius: 30px; cursor: pointer; transition: .4s; display: flex; align-items: center; }
+.slider:before { content: ""; position: absolute; height: 22px; width: 22px; left: 4px; background: white; border-radius: 50%; transition: .4s; z-index: 2; }
+.toggle-switch input:checked + .slider { background: #22c55e; }
+.toggle-switch input:checked + .slider:before { transform: translateX(40px); }
+.slider-text { width: 100%; font-size: 20px; font-weight: bold; color: #333; text-align: right; padding-right: 10px; }
+.toggle-switch input:checked + .slider .slider-text { text-align: left; padding-left: 12px; color: white; }
+
+/* Circle Pump Icon */
+.pump-center { display:flex; flex-direction:column; align-items:center; margin:30px 0; }
+.pump-icon-circle { width: 130px; height: 130px; background:#e0f2fe; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:55px; transition: .3s; }
+.pump-icon-circle.zoom { animation: beat 0.6s infinite alternate; }
+.pump-icon.active{ background: #4d9868;}
+@keyframes beat { from{transform:scale(1)} to{transform:scale(1.3)}
+ }
+ 
