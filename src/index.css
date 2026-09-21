@@ -1,0 +1,208 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html, body, #root { width: 100%; margin: 0; padding: 0; overflow-x: hidden; }
+.html,body{
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  overflow: hidden;
+}
+header,nav{
+    position: sticky;
+    top:0;
+    z-index: 1000;
+    width: 100%;
+}
+.hero-image{
+  width: 100%;
+  height: 90%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+.hero-content{
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Yehi center me laayega */
+  text-align: center;
+  width: 100%;
+  max-width: 1500px;
+}
+
+.hero-content h1{
+  color: #15803d;
+  font-size: 100px;
+  font-weight: 900;
+  margin-bottom: 20px;
+  text-shadow:20px 20px 100px rgba(255,255,255,0.9),0px 2px 4px rgba(0,0,0,0.9);
+  line-height: 1.5;
+}
+
+.hero-content p{
+  color: #333;
+  font-size: 40px;
+  line-height: 1.1;
+  margin-bottom: 20px;
+  width: 1200px;
+}
+
+.hero-content button{
+  background: #15803d;
+  color: white;
+  border: none;
+  padding: 10px 22px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 20px;
+  font-weight: 600;
+  box-shadow:0px 10px rgba(0,0,0,0.2);
+  text-align: center;
+  
+}
+.hero-content button:hover{
+
+    background: #0f5d2b;
+    text-align: center;
+    
+}
+.para-box{
+  text-align: center;
+  margin-bottom: 25px;
+  padding-left: 10ch;
+}
+
+.line1, .line2, .line3{
+  margin: 0 auto;
+  color: #222;
+  line-height: 1.6;
+}
+
+.line1{
+  font-size: 20px;
+  max-width: 1200px; /* sabse bada */
+}
+.line2{
+  font-size: 19px;
+  max-width: 1100px; /* usse chota */
+}
+.line3{
+  font-size: 19px;
+  max-width: 900px; /* sabse chota */
+}
+.features-section{
+  width: 100%;
+  min-height: 90vh;
+  background: url('/home.jpg'); /* tumhare pass home.jpg hai */
+  background-size: cover;
+  background-position: center;
+  padding: 40px 30px;
+  box-sizing: border-box;
+}
+
+.features-title{
+  text-align: center;
+  color:rgba(24, 152, 24, 0.882);
+  text-shadow:20px 20px 90px rgba(255,255,255,0.9),0px 4px 8px rgba(0,0,0,0.9);
+  
+  font-size: 70px;
+  font-weight: 800;
+  margin-bottom: 80px;
+  
+}
+
+.features-grid{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px 20px;
+}
+
+.feature-card{
+  background: rgba(255,255,255,0.18);
+  backdrop-filter: blur(8px); /* ye sheeshe jaisa blur dega */
+  border-radius: 12px;
+  padding: 30px 40px;
+  padding-bottom: 60px;
+  border-left: 4px solid #22c55e;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+
+.feature-card.border-orange{
+  border-left-color: #f59e0b;
+}
+
+.feature-card h3{
+  margin: 0 0 5px 0;
+  color:black;
+  font-size: 30px;
+  font-weight: 700;
+  padding-bottom: 40px;
+}
+
+.feature-card p{
+  margin: 0;
+  color: #f0f0f0;
+  font-size: 28px;
+  line-height: 1.5;
+  
+}
+
+/* Mobile me ek ke neeche ek */
+@media (max-width: 768px){
+  .features-grid{
+    grid-template-columns: 1fr;
+  }
+  .hero-section{
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  padding-top: 60px; /* Navbar jitni jagah chod di */
+  box-sizing: border-box;
+  overflow: hidden;
+}
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  margin: 0 !important;
+}
+
+.navbar{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 65px;
+  background: #0a8a2a; /* tumhara green */
+  display: flex;
+  justify-content: space-between; /* logo left, link right */
+  align-items: center;
+  padding: 0 40px;
+  z-index: 9999;
+}
+
+.navbar .logo{
+  color: white;
+  font-weight: bold;
+  font-size: 30px;
+}
+
+/* Yahi tumhara main fix hai - neela rang hatane ke liye */
+.navbar a{
+  color: white !important;
+  text-decoration: none !important; /* neeche wali line hatayega */
+  margin-left: 25px;
+  font-size: 16px;
+}
+
+.hero{
+  padding-top: 65px; /* navbar ke liye jagah */
+  width: 100%;
+  min-height: 100vh;
+}
+
+
+}

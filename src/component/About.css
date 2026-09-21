@@ -1,0 +1,71 @@
+.about-page{
+  min-height: 100vh;
+  padding: 90px 20px 40px;
+  background-image: url('https://images.unsplash.com/photo-1525498128493-380d1990a112?q=80&w=2070');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.about-main-title{
+  text-align: center;
+  color: #0a2a0a;
+  font-size: 60px;
+  font-weight: 800;
+  margin-bottom: 35px;
+  text-shadow: 0 0 10px #22c55e;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+.title-icon{
+  width: 40px;
+  height: 40px;
+  background: #22d3ee;
+  display: inline-block;
+  border: 2px solid #fff;
+  box-shadow: 0 0 8px #22d3ee;
+}
+
+.about-grid{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.about-card{
+  background: rgba(235, 235, 235, 0.92);
+  border-radius: 12px;
+  padding: 22px 25px;
+  border-left: 5px solid;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+.about-card h2{
+  text-align: center;
+  font-size: 30px;
+  font-weight: 800;
+  margin-bottom: 25px;
+  color: #111;
+}
+.about-card p, .about-card ul{
+  text-align: center;
+  font-size: 30px;
+  color: #222;
+  line-height: 1.5;
+}
+.about-card ul{ list-style: none; padding: 0; }
+.about-card li::before{ content: "•  "; font-weight: bold; }
+
+.border-green{ border-color: #22c55e; }
+.border-blue{ border-color: #3b82f6; }
+.border-orange{ border-color: #f59e0b; }
+.border-red{ border-color: #ef4444; }
+.border-purple{ border-color: #8b5cf6; }
+.border-teal{ border-color: #14b8a6; }
+
+@media(max-width: 768px){
+  .about-grid{ grid-template-columns: 1fr; }
+}
